@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube Downloader</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        width: 250px;
+        text-align: center;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;  /* Start hidden */
+      }
+      h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      img {
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+      }
+      select, button {
+        margin: 10px 0;
+        padding: 8px;
+        width: 100%;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        transition: background-color 0.3s;
+      }
+      button {
+        cursor: pointer;
+        background-color: #007bff;
+        color: #fff;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      select:focus, button:focus {
+        outline: none;
+        border-color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 id="video-title">Loading...</h3>
+    <img id="thumbnail" src="" alt="Thumbnail">
+    
+    <div>
+      <label for="resolution">Resolution:</label>
+      <select id="resolution">
+        <option value="140p">140p</option>
+        <option value="360p">360p</option>
+        <option value="720p">720p</option>
+        <option value="1080p">1080p</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="format">Format:</label>
+      <select id="format">
+        <option value="mp4">MP4</option>
+        <option value="mkv">MKV</option>
+        <option value="opus">Opus (Audio)</option>
+        <option value="wav">WAV (Audio)</option>
+      </select>
+    </div>
+
+    <button id="downloadBtn">Download</button>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
